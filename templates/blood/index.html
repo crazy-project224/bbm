@@ -1,0 +1,86 @@
+﻿{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <!--  <style>
+        .xyz{
+          margin-bottom: 0px;
+          background-image: url('{% static "image/homepage.jpg" %}');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      </style> -->
+      
+</head>
+
+
+<body>
+  {% include "blood/navbarindex.html" %}
+<br>
+  {% include "blood/ctry.html" %}
+  
+  
+<!--
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+      
+      <br><br><br><br>
+      
+    </div>  
+  </section> -->
+
+
+{% include "blood/quote.html" %}
+
+<br>
+
+  <div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+
+    <p class="lead text-center">“Blood Donation Is A Great Act Of Kindness.”
+      </p>
+    
+   <!-- <p class="text-center">- Team SPHN</p> -->
+    
+  </div>
+  {% include "blood/footer.html" %}
+
+
+<!-- java script for scrolling -->
+<script> 
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+<!-- java script for scrolling END -->
+
+
+
+</body>
+
+</html>
